@@ -13,27 +13,37 @@ The covnerter will automatically skip anything that's already in the desired for
 Supports PushBullet notifications.
 
 
-INSTALLATION
+---------INSTALLATION
 
 1. Install the pre-requisites
 apt-get install php5 php5-curl mediainfo ffmpeg
 
 2. Slurp it down with GIT
-git clone https://github.com/dswinton/Batch-H.264-Converter.git
+git clone https://github.com/surtarso/batch-H264-converter.git
 
 
+--------USAGE (all files in one folder)
 
-USAGE
-
-Before using - open config.php and customise to your liking.  
+Before using - open config.php and customise to your liking.
 Note that at a minimum you'll need to customise the scratch and junkyard folders for this tool to work (it comes set up for my environment, which probably won't work for you.
 
 After customising your configuration, sinply point it at a directory, then be very, very patient...
-batch-h264-converter /folder/of/videos/
+./batch-h264-converter /folder/of/videos/
+
+--------USAGE (deeply nested files /show|movie/title/season/etc)
+
+Befora using - open media_convert.sh and customise the locations
+Note that you will still need to customise config.php and locations must match (will fix later)
+
+After setting config.php and media_convert.sh, simply run the script, then be very, very patient...
+./media_convert.sh
+
 
 I personally recommend running this converter using screen - so you can close your terminal window and come back to it later...
 screen -R conveter
-batch-h264-converter /folder/of/videos/
+./batch-h264-converter /folder/of/videos/
+or
+./media_convert.sh
 
 
 
