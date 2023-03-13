@@ -6,10 +6,12 @@ MOVIES='/mnt/vault/videos/movies'
 SERIES='/mnt/vault/videos/series'
 #conversion folders (if changed, also need to be changed on config.php) //willfixlater
 TMP_FOLDER='/mnt/vault/videos/tmp'
-JUNK_FOLDER='/mnt/vault/videos/junk'
+#disabled in config.php
+#JUNK_FOLDER='/mnt/vault/videos/junk'
 
 #create conversion folders set on config.pgp
-mkdir ${TMP_FOLDER} ${JUNK_FOLDER}
+mkdir ${TMP_FOLDER}
+#mkdir ${JUNK_FOLDER}
 
 #movies
 find ${MOVIES}/* -type d | while read line ; do ${SCRIPT} "$line"/ ; done
@@ -18,7 +20,9 @@ find ${MOVIES}/* -type d | while read line ; do ${SCRIPT} "$line"/ ; done
 find ${SERIES}/* -type d | while read line ; do ${SCRIPT} "$line"/ ; done
 
 #remove conversion folders (if empty) set on config.php
-rmdir ${TMP_FOLDER} ${JUNK_FOLDER}
+rmdir ${TMP_FOLDER}
+#rmdir ${JUNK_FOLDER}
 
 #check if folders persisted (had files)
-ls ${TMP_FOLDER}/ ${JUNK_FOLDER}/
+ls -l ${TMP_FOLDER}/
+#ls -l ${JUNK_FOLDER}/
