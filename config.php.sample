@@ -8,7 +8,7 @@ $config['dir']['scratch'] = "/mnt/vault/videos/tmp/";
 
 //Move original files to a "junkyard" to be manually deleted after review
 //If disabled, source files will be deleted as they are converted
-$config['keepInJunkyard'] = true;
+$config['keepInJunkyard'] = false;
 
 //Folder for junkyard
 $config['dir']['junkyard'] = "/mnt/vault/videos/junk/";
